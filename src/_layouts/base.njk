@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "주경야근" }} - 주경야근</title>
+    <meta name="description" content="{{ description or "프로그래밍, 데이터분석, IT 트렌드에 대한 기술 블로그" }}">
+    
+    <!-- SEO -->
+    <meta name="keywords" content="{{ keywords or "프로그래밍, 개발, 데이터분석, IT, 기술블로그" }}">
+    <meta name="author" content="주경야근">
+    <link rel="canonical" href="{{ page.url }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ title or "주경야근" }}">
+    <meta property="og:description" content="{{ description or "프로그래밍, 데이터분석, IT 트렌드에 대한 기술 블로그" }}">
+    <meta property="og:type" content="{{ ogType or "website" }}">
+    <meta property="og:url" content="{{ page.url }}">
+    {% if thumbnail %}
+    <meta property="og:image" content="{{ thumbnail }}">
+    {% endif %}
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Code Copy Script -->
+    <script src="/js/code-copy.js" defer></script>
+    
+    <!-- Google Analytics -->
+    {% set gaId = env.googleAnalytics or site.googleAnalytics %}
+    {% if gaId %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ gaId }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ gaId }}');
+    </script>
+    {% endif %}
+    
+    <!-- Google AdSense (자동 광고) -->
+    {% set adsenseEnabled = env.adsense.enabled or site.adsense.enabled %}
+    {% set adsenseClient = env.adsense.client or site.adsense.client %}
+    {% if adsenseEnabled and adsenseClient %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsenseClient }}"
+            crossorigin="anonymous"></script>
+    {% endif %}
+</head>
+<body class="bg-gray-50 text-dark-900">
+    <div class="flex flex-col min-h-screen">
+        {% include "header.njk" %}
+        
+        <main class="flex-1 w-full">
+            {{ content | safe }}
+        </main>
+        
+        {% include "footer.njk" %}
+    </div>
+    
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

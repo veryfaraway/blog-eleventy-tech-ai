@@ -1,0 +1,37 @@
+<footer class="border-t border-gray-200 bg-gray-50 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="font-bold text-dark-900 mb-4">주경야근</h3>
+                <p class="text-dark-700 text-sm">
+                    프로그래밍, 데이터분석, IT 트렌드에 대한 기술 블로그입니다.
+                </p>
+            </div>
+            
+            <div>
+                <h3 class="font-bold text-dark-900 mb-4">Navigation</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/" class="text-dark-700 hover:text-primary-600">Home</a></li>
+                    <li><a href="/pages/" class="text-dark-700 hover:text-primary-600">Page</a></li>
+                    <li><a href="/blog/" class="text-dark-700 hover:text-primary-600">Blog</a></li>
+                    <li><a href="/categories/" class="text-dark-700 hover:text-primary-600">Categories</a></li>
+                    <li><a href="/about/" class="text-dark-700 hover:text-primary-600">About</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-bold text-dark-900 mb-4">Categories</h3>
+                <ul class="space-y-2 text-sm">
+                    {% for category in categoryList | slice(0, 4) %}
+                    <li><a href="/categories/{{ category | slugify }}/" class="text-dark-700 hover:text-primary-600">{{ category }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-dark-700">
+            <p>&copy; 2025 주경야근. All rights reserved.</p>
+            <p>Built with Eleventy + Tailwind CSS</p>
+        </div>
+    </div>
+</footer>
