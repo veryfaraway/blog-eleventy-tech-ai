@@ -14,6 +14,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
   
+  // SEO 및 인증 파일
+  eleventyConfig.addPassthroughCopy("src/ads.txt");
+  eleventyConfig.addPassthroughCopy("src/*.html");
+  
   // Prism.js 테마 복사
   eleventyConfig.addPassthroughCopy({
     "node_modules/prismjs/themes/prism-tomorrow.css": "css/prism-theme.css"
