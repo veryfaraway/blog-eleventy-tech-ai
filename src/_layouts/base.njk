@@ -12,13 +12,18 @@
     <link rel="canonical" href="{{ page.url }}">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="{{ title or "주경야근" }}">
-    <meta property="og:description" content="{{ description or "프로그래밍, 데이터분석, IT 트렌드에 대한 기술 블로그" }}">
+    <meta property="og:title" content="{{ title or site.title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
     <meta property="og:type" content="{{ ogType or "website" }}">
-    <meta property="og:url" content="{{ page.url }}">
-    {% if thumbnail %}
-    <meta property="og:image" content="{{ thumbnail }}">
-    {% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ thumbnail or site.ogImage }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title or site.title }}">
+    <meta name="twitter:description" content="{{ description or site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ thumbnail or site.ogImage }}"
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
