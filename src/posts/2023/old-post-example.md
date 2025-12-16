@@ -3,7 +3,7 @@ layout: post.njk
 title: 2024년 포스트 예제
 description: 연도별 디렉토리로 포스트를 관리할 수 있습니다.
 date: 2023-12-15
-category: DevOps
+category: Frontend
 tags:
   - organization
   - tips

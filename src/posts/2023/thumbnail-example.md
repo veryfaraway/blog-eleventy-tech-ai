@@ -3,7 +3,7 @@ layout: post.njk
 title: Thumbnail 이미지 예제
 description: 포스트에 썸네일 이미지를 추가하는 방법을 알아봅니다.
 date: 2025-01-27
-category: Backend
+category: Frontend
 tags:
   - tutorial
   - images

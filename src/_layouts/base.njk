@@ -26,13 +26,17 @@
     <meta name="twitter:image" content="{{ site.url }}{{ thumbnail or site.ogImage }}">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="{{ site.favicon }}">
+    <link rel="apple-touch-icon" href="{{ site.ogImage }}">
     
     <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
     
     <!-- Code Copy Script -->
     <script src="/js/code-copy.js" defer></script>
+    
+    <!-- External Links Script -->
+    <script src="/js/external-links.js" defer></script>
     
     <!-- Google Analytics -->
     {% set gaId = env.googleAnalytics or site.googleAnalytics %}

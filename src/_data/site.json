@@ -3,6 +3,8 @@
   "description": "프로그래밍, 데이터분석, IT 트렌드에 대한 기술 블로그",
   "url": "https://burn.eone.one",
   "language": "ko",
+  "logo": "/assets/logo.svg",
+  "favicon": "/assets/favicon.svg",
   "ogImage": "/assets/og-image.png",
   "author": {
     "name": "야근반장",

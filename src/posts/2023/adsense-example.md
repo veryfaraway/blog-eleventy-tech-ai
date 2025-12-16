@@ -3,7 +3,7 @@ layout: post.njk
 title: Google AdSense 광고 삽입 예제
 description: 포스트 중간에 광고를 삽입하는 방법을 알아봅니다.
 date: 2024-01-29
-category: Backend
+category: Frontend
 tags:
   - tutorial
   - monetization
