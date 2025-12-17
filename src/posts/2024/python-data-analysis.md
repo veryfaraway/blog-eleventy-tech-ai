@@ -3,7 +3,8 @@ layout: post.njk
 title: Python으로 시작하는 데이터 분석
 description: Pandas와 NumPy를 활용한 데이터 분석 기초를 배워봅니다.
 date: 2025-01-18
-category: Modeling
+thumbnail: https://images.unsplash.com/photo-1649180556628-9ba704115795?q=80&w=2362&auto=format&fit=crop&ixlib=rb-4.1.0
+category: Data
 tags:
   - python
   - pandas

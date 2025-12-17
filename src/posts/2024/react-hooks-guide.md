@@ -3,6 +3,7 @@ layout: post.njk
 title: React Hooks 완벽 가이드
 description: useState, useEffect, useContext 등 React Hooks의 모든 것을 알아봅니다.
 date: 2025-01-20
+thumbnail: https://studio.uxpincdn.com/studio/wp-content/uploads/2024/07/React-Hooks.webp
 category: Frontend
 tags:
   - react

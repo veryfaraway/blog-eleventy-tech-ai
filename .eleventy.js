@@ -60,6 +60,11 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // find 필터 - slug로 포스트 찾기
+  eleventyConfig.addFilter("find", function(collection, slug) {
+    return collection.find(item => item.data.slug === slug);
+  });
+
   // AdSense 광고 shortcode
   eleventyConfig.addShortcode("adsense", function(type = "display") {
     const siteData = this.ctx.site || {};
@@ -134,12 +139,12 @@ module.exports = function(eleventyConfig) {
     return collection.getAll().filter(item => item.data.category === "Backend");
   });
   
-  eleventyConfig.addCollection("Modeling", function(collection) {
-    return collection.getAll().filter(item => item.data.category === "Modeling");
+  eleventyConfig.addCollection("Data", function(collection) {
+    return collection.getAll().filter(item => item.data.category === "Data");
   });
   
-  eleventyConfig.addCollection("NoSQL", function(collection) {
-    return collection.getAll().filter(item => item.data.category === "NoSQL");
+  eleventyConfig.addCollection("Tools", function(collection) {
+    return collection.getAll().filter(item => item.data.category === "Tools");
   });
   
   eleventyConfig.addCollection("DevOps", function(collection) {
@@ -167,8 +172,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addGlobalData("categoryList", [
     "Frontend",
     "Backend", 
-    "Modeling",
-    "NoSQL",
+    "Data",
+    "Tools",
     "DevOps",
     "AI/ML"
   ]);

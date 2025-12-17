@@ -17,8 +17,8 @@
 기본 설정된 카테고리:
 - **Frontend** - 프론트엔드 개발
 - **Backend** - 백엔드 개발
-- **Modeling** - 데이터 모델링
-- **NoSQL** - NoSQL 데이터베이스
+- **Data** - 데이터베이스, 데이터 분석, 모델링
+- **Tools** - 개발 도구, 유틸리티
 - **DevOps** - 데브옵스/인프라
 - **AI/ML** - 인공지능/머신러닝
 
@@ -55,8 +55,8 @@ eleventyConfig.addCollection("Mobile", function(collection) {
 eleventyConfig.addGlobalData("categoryList", [
   "Frontend",
   "Backend", 
-  "Modeling",
-  "NoSQL",
+  "Data",
+  "Tools",
   "DevOps",
   "AI/ML",
   "Mobile"  // 새 카테고리 추가
@@ -143,8 +143,8 @@ eleventyConfig.addCollection("Modeling", function(collection) {
 eleventyConfig.addGlobalData("categoryList", [
   "Frontend",
   "Backend", 
-  // "Modeling",  // 제거됨
-  "NoSQL",
+  // "Data",  // 제거됨
+  "Tools",
   "DevOps",
   "AI/ML"
 ]);
@@ -243,7 +243,7 @@ eleventyConfig.addCollection("allCategories", function(collection) {
 });
 
 // 동적 카테고리 컬렉션 생성
-const categories = ["Frontend", "Backend", "Modeling", "NoSQL", "DevOps", "AI/ML"];
+const categories = ["Frontend", "Backend", "Data", "Tools", "DevOps", "AI/ML"];
 categories.forEach(category => {
   eleventyConfig.addCollection(category, function(collection) {
     return collection.getAll().filter(item => item.data.category === category);

@@ -115,6 +115,7 @@ VS Code를 사용한다면 스니펫을 추가할 수 있습니다.
 - `draft`: `true`로 설정하면 빌드에서 제외
 - `thumbnail`: 썸네일 이미지 경로
 - `author`: 작성자 (기본값 사용 시 생략 가능)
+- `relatedPosts`: 관련 글 slug 배열 (자동으로 관련 글 섹션 표시)
 
 ## 카테고리 목록
 
@@ -122,14 +123,10 @@ VS Code를 사용한다면 스니펫을 추가할 수 있습니다.
 
 - Frontend
 - Backend
+- Data
+- Tools
 - DevOps
-- DevTools
-- Database
-- NoSQL
-- Modeling
 - AI/ML
-- Security
-- Performance
 
 ## 태그 작성 팁
 
@@ -161,6 +158,52 @@ VS Code를 사용한다면 스니펫을 추가할 수 있습니다.
 
 지원 언어: javascript, typescript, python, bash, json, yaml, html, css 등
 
+## 관련 글 추가
+
+포스트와 관련된 다른 글을 자동으로 표시할 수 있습니다.
+
+### 방법 1: Front Matter에 지정 (추천)
+
+```yaml
+---
+title: "포스트 제목"
+slug: my-post
+relatedPosts:
+  - other-post-slug
+  - another-post-slug
+---
+```
+
+관련 글은 포스트 하단에 썸네일과 함께 자동으로 표시됩니다.
+
+**예시:**
+
+```yaml
+---
+title: "SDKMAN 사용방법"
+slug: sdkman-usage
+relatedPosts:
+  - macos-managing-jdk
+---
+```
+
+### 방법 2: 수동 링크 추가
+
+마크다운 본문에 직접 링크를 추가할 수도 있습니다:
+
+```markdown
+## 관련 글
+
+- [macOS에서 JDK 관리하기](/posts/2024/macos-managing-jdk/)
+- [Node.js 버전 관리 - fnm](/posts/2025/fnm-fast-node-manager/)
+```
+
+### 팁
+
+- 관련 글은 2-3개 정도가 적당합니다
+- 같은 카테고리나 태그를 가진 글을 연결하세요
+- 시리즈 글은 서로 연결하면 좋습니다
+
 ## 체크리스트
 
 포스트 작성 후 확인사항:
@@ -171,6 +214,7 @@ VS Code를 사용한다면 스니펫을 추가할 수 있습니다.
 - [ ] 카테고리와 태그가 적절한가?
 - [ ] 코드 블록에 언어가 지정되었는가?
 - [ ] 이미지에 대체 텍스트가 있는가?
+- [ ] 관련 글을 추가했는가? (선택사항)
 - [ ] 맞춤법 검사를 했는가?
 - [ ] 로컬에서 빌드 테스트를 했는가?
 

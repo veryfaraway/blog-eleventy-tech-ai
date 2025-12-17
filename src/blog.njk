@@ -1,11 +1,11 @@
 ---
 layout: base.njk
 title: Blog
-permalink: /blog/
 pagination:
   data: collections.blog
   size: 12
   alias: posts
+permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}
 ---
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

@@ -3,7 +3,8 @@ layout: post.njk
 title: MongoDB 기초부터 실전까지
 description: NoSQL 데이터베이스 MongoDB의 기본 개념과 사용법을 알아봅니다.
 date: 2025-01-16
-category: NoSQL
+thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/MongoDB_NYC_Headquarters.jpg/1200px-MongoDB_NYC_Headquarters.jpg
+category: Data
 tags:
   - mongodb
   - database

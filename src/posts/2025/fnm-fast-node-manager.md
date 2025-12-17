@@ -5,7 +5,7 @@ description: Rust로 작성된 초고속 Node.js 버전 관리 도구 fnm의 설
 keywords: nodejs, fnm, version-manager
 thumbnail: https://repository-images.githubusercontent.com/166045424/8289ae80-d301-11e9-9417-c43aeaee86a2
 date: 2025-12-01
-category: DevTools
+category: Tools
 tags:
   - nodejs
   - fnm
