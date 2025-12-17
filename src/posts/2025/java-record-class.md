@@ -12,7 +12,7 @@ tags:
   - immutability
   - spring-boot
   - java16
-thumbnail: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3
+thumbnail: https://media.licdn.com/dms/image/v2/D5612AQEkpIuNMavuiA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1686767414414?e=2147483647&v=beta&t=PHNjoDG3_wsGDP0as26ILzaNkGbiQIccDA9JNW5fOIw
 ---
 
 ## 개요
