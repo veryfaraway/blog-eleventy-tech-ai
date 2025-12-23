@@ -9,7 +9,7 @@
     <!-- SEO -->
     <meta name="keywords" content="{{ keywords or "프로그래밍, 개발, 데이터분석, IT, 기술블로그" }}">
     <meta name="author" content="주경야근">
-    <link rel="canonical" href="{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     
     <!-- Open Graph -->
     <meta property="og:title" content="{{ title or site.title }}">
@@ -55,9 +55,12 @@
     {% endif %}
     
     <!-- Google AdSense (자동 광고) -->
-    {% set adsenseEnabled = env.adsense.enabled or site.adsense.enabled %}
+    {% set adsenseEnabled = env.adsense.enabled %}
+    {% if adsenseEnabled == null or adsenseEnabled == "" %}
+      {% set adsenseEnabled = site.adsense.enabled %}
+    {% endif %}
     {% set adsenseClient = env.adsense.client or site.adsense.client %}
-    {% if adsenseEnabled and adsenseClient %}
+    {% if adsenseEnabled == true and adsenseClient %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsenseClient }}"
             crossorigin="anonymous"></script>
     {% endif %}
