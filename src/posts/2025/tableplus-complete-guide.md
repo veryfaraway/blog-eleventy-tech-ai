@@ -13,7 +13,7 @@ tags:
   - tools
   - sql-client
   - database-management
-thumbnail: https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2374&auto=format&fit=crop
+thumbnail: https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/61/d1/7b61d1ee-2003-d2e2-8394-69c388be055a/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/1200x630wa.png
 ---
 
 ## 개요

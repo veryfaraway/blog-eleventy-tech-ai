@@ -20,8 +20,12 @@
 
 [class*="theme--"] .theme-header {
   color: var(--theme-text);
-  background: var(--theme-bg);
+  background-color: transparent;
+  /* 순서: 그라디언트 → 데코 (이미지는 제거) */
   background-image: var(--theme-bg), var(--theme-deco);
+  background-size: cover, auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
   border: none;
 }
 
