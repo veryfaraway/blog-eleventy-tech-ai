@@ -5,7 +5,7 @@ slug: it-project-lifecycle
 date: 2022-01-07
 draft: false
 description: "전형적인 IT 프로젝트 라이프사이클"
-category: DevOps
+category: Trends
 tags:
   - humor
 thumbnail: https://images.unsplash.com/photo-1535726858289-9ffe2dff6f52?q=80&w=2938&auto=format&fit=crop

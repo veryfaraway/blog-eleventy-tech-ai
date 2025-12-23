@@ -131,12 +131,20 @@ module.exports = function(eleventyConfig) {
   });
 
   // 카테고리별 컬렉션
+  eleventyConfig.addCollection("Trends", function(collection) {
+    return collection.getAll().filter(item => item.data.category === "Trends");
+  });
+  
   eleventyConfig.addCollection("Frontend", function(collection) {
     return collection.getAll().filter(item => item.data.category === "Frontend");
   });
   
   eleventyConfig.addCollection("Backend", function(collection) {
     return collection.getAll().filter(item => item.data.category === "Backend");
+  });
+  
+  eleventyConfig.addCollection("Mobile", function(collection) {
+    return collection.getAll().filter(item => item.data.category === "Mobile");
   });
   
   eleventyConfig.addCollection("Data", function(collection) {
@@ -170,8 +178,10 @@ module.exports = function(eleventyConfig) {
 
   // 카테고리 목록
   eleventyConfig.addGlobalData("categoryList", [
+    "Trends",
     "Frontend",
     "Backend", 
+    "Mobile", 
     "Data",
     "Tools",
     "DevOps",
