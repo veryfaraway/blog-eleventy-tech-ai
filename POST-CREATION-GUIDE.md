@@ -116,6 +116,7 @@ VS Code를 사용한다면 스니펫을 추가할 수 있습니다.
 - `thumbnail`: 썸네일 이미지 경로
 - `author`: 작성자 (기본값 사용 시 생략 가능)
 - `relatedPosts`: 관련 글 slug 배열 (자동으로 관련 글 섹션 표시)
+- `lang`: 포스트 언어 (`ko` 또는 `en`, 기본값: `ko`)
 
 ## 카테고리 목록
 
@@ -252,6 +253,69 @@ npm run dev
 2. **시리즈 포스트**: 태그를 동일하게 사용
 3. **업데이트**: `updated` 필드로 수정일 표시 가능
 4. **목차**: 긴 포스트는 `## 목차` 섹션 추가 권장
+
+## 다국어 지원
+
+이 블로그는 한국어와 영어를 지원합니다. 포스트에 언어를 지정하여 다국어 콘텐츠를 작성할 수 있습니다.
+
+### 포스트에 언어 지정하기
+
+포스트의 front matter에 `lang` 필드를 추가하세요:
+
+```yaml
+---
+layout: post.njk
+title: "My Post Title"
+lang: en  # 또는 "ko" (기본값)
+date: 2025-01-30
+category: Backend
+tags:
+  - java
+  - spring
+---
+```
+
+### 언어별 포스트 작성 팁
+
+1. **한국어 포스트** (`lang: ko` 또는 생략)
+   - 한국 개발자 커뮤니티를 타겟으로 한 콘텐츠
+   - 한국어 키워드에 최적화
+
+2. **영어 포스트** (`lang: en`)
+   - 글로벌 개발자 커뮤니티를 타겟으로 한 콘텐츠
+   - 영어 키워드에 최적화
+   - SEO와 검색 유입량 증가에 도움
+
+### 언어별 컬렉션
+
+- `collections.blog_ko`: 한국어 포스트만
+- `collections.blog_en`: 영어 포스트만
+- `collections.blog`: 모든 언어 포스트
+
+### 동일 주제의 다국어 포스트
+
+같은 주제를 한국어와 영어로 모두 작성하려면:
+
+1. **한국어 포스트**: `src/posts/2025/my-post-ko.md`
+   ```yaml
+   title: "제목"
+   lang: ko
+   slug: my-post-ko
+   ```
+
+2. **영어 포스트**: `src/posts/2025/my-post-en.md`
+   ```yaml
+   title: "Title"
+   lang: en
+   slug: my-post-en
+   ```
+
+서로의 포스트를 `relatedPosts`에 추가하면 좋습니다!
+
+### 언어 전환 기능
+
+사용자는 헤더의 언어 전환 버튼으로 한국어/영어를 전환할 수 있습니다. 
+선택한 언어는 localStorage에 저장되어 다음 방문 시에도 유지됩니다.
 
 ## 참고 문서
 

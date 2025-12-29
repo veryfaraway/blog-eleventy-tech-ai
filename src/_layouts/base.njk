@@ -1,9 +1,10 @@
+{% set currentLang = page.lang or "ko" %}
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="{{ currentLang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or "주경야근" }} - 주경야근</title>
+    <title>{{ title or site.title }} - {{ site.title }}</title>
     <meta name="description" content="{{ description or "프로그래밍, 데이터분석, IT 트렌드에 대한 기술 블로그" }}">
     
     <!-- SEO -->

@@ -4,10 +4,11 @@ title: Categories
 permalink: /categories/
 ---
 
+{% set currentLang = page.lang or "ko" %}
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="mb-8">
-        <h1 class="text-4xl font-bold text-dark-900 mb-2">Categories</h1>
-        <p class="text-dark-700">주제별로 분류된 글들을 찾아보세요</p>
+        <h1 class="text-4xl font-bold text-dark-900 mb-2">{{ i18n[currentLang].categories.title | default("Categories") }}</h1>
+        <p class="text-dark-700">{{ i18n[currentLang].categories.subtitle | default("주제별로 분류된 글들을 찾아보세요") }}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -25,12 +26,13 @@ permalink: /categories/
             </div>
             <p class="text-sm text-dark-700">
                 {% if categoryPosts %}
-                {{ categoryPosts.length }}개의 포스트
+                {{ categoryPosts.length }} {{ i18n[currentLang].categories.posts | default("개의 포스트") }}
                 {% else %}
-                포스트 없음
+                {{ i18n[currentLang].categories.noPosts | default("포스트 없음") }}
                 {% endif %}
             </p>
         </a>
         {% endfor %}
     </div>
 </div>
+

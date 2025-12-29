@@ -7,7 +7,12 @@ permalink: /tags/{{ tag | lower }}/
 layout: base.njk
 ---
 
-{% set taggedPosts = collections.blog | filterByTag(tag) %}
+{% set currentLang = page.lang or "ko" %}
+{% set allTaggedPosts = collections.blog | filterByTag(tag) %}
+{% set taggedPosts = allTaggedPosts | filterByLang(currentLang) %}
+{% if taggedPosts.length == 0 %}
+    {# no posts for this language — show empty list (user requested language-only) #}
+{% endif %}
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -18,18 +23,18 @@ layout: base.njk
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
-                    블로그로 돌아가기
+                    {{ i18n[currentLang].nav.blog | default("블로그로 돌아가기") }}
                 </a>
                 <h1 class="text-4xl font-bold text-dark-900 mb-2">
                     <span class="text-primary-600">#{{ tag }}</span>
                 </h1>
-                <p class="text-dark-700">{{ taggedPosts.length }}개의 포스트</p>
+                <p class="text-dark-700" data-post-count>{{ allTaggedPosts.length }}개의 포스트</p>
             </div>
 
             <!-- 카드 그리드 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {% for post in taggedPosts %}
-                <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="posts-container">
+                {% for post in allTaggedPosts %}
+                <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group post-item" data-lang="{{ post.data.lang | default('ko') }}">
                     <!-- Thumbnail -->
                     <a href="{{ post.url }}" class="block aspect-video bg-gradient-to-br from-primary-100 to-accent-100 relative overflow-hidden">
                         {% if post.data.thumbnail %}
@@ -74,6 +79,7 @@ layout: base.njk
                 </article>
                 {% endfor %}
             </div>
+
         </div>
         
         <!-- 사이드바 -->

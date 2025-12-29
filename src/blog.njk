@@ -2,25 +2,27 @@
 layout: base.njk
 title: Blog
 pagination:
-  data: collections.blog
-  size: 12
-  alias: posts
+    data: collections.blog
+    size: 24
+    alias: posts
 permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}
 ---
 
+
+{% set currentLang = page.lang or "ko" %}
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <!-- 메인 컨텐츠 -->
         <div class="lg:col-span-8">
             <div class="mb-8">
-                <h1 class="text-4xl font-bold text-dark-900 mb-2">Blog</h1>
-                <p class="text-dark-700">프로그래밍, 데이터분석, IT 트렌드에 대한 글들</p>
+                <h1 class="text-4xl font-bold text-dark-900 mb-2">{{ i18n[currentLang].blog.title | default(i18n.ko.blog.title) }}</h1>
+                <p class="text-dark-700">{{ i18n[currentLang].blog.subtitle | default(i18n.ko.blog.subtitle) }}</p>
             </div>
 
             <!-- 카드 그리드 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12" id="posts-container">
                 {% for post in posts %}
-                <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+                <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group post-item" data-lang="{{ post.data.lang | default('ko') }}">
                     <!-- Thumbnail -->
                     <a href="{{ post.url }}" class="block aspect-video bg-gradient-to-br from-primary-100 to-accent-100 relative overflow-hidden">
                         {% if post.data.thumbnail %}
@@ -72,7 +74,7 @@ permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
                 {% if pagination.href.previous %}
                 <a href="{{ pagination.href.previous }}" 
                    class="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-primary-50 hover:border-primary-300 transition-colors">
-                    이전
+                    {{ i18n[currentLang].blog.prevPage | default(i18n.ko.blog.prevPage) }}
                 </a>
                 {% endif %}
                 
@@ -83,7 +85,7 @@ permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
                 {% if pagination.href.next %}
                 <a href="{{ pagination.href.next }}" 
                    class="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-primary-50 hover:border-primary-300 transition-colors">
-                    다음
+                    {{ i18n[currentLang].blog.nextPage | default(i18n.ko.blog.nextPage) }}
                 </a>
                 {% endif %}
             </nav>

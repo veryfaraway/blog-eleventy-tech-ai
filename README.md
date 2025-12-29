@@ -9,6 +9,16 @@
 - **Nunjucks** - 템플릿 엔진
 - **Prism.js** - 코드 하이라이팅
 
+## 주요 기능
+
+- ✅ 다국어 지원 (한국어/영어)
+- ✅ 반응형 디자인
+- ✅ SEO 최적화
+- ✅ 코드 하이라이팅
+- ✅ 카테고리 및 태그 시스템
+- ✅ 페이지네이션
+- ✅ 다크 모드 지원 (테마 시스템)
+
 ## 시작하기
 
 ### 설치
@@ -67,6 +77,7 @@ draft: false
 - `tags`: 태그 배열
 - `thumbnail`: 썸네일 이미지 URL (선택)
 - `draft`: 초안 여부 (true면 프로덕션에서 제외)
+- `lang`: 포스트 언어 (`ko` 또는 `en`, 기본값: `ko`)
 
 **참고:** `readingTime`은 자동으로 계산되므로 입력하지 않아도 됩니다.
 
@@ -200,6 +211,33 @@ UTTERANCES_REPO=username/repository
 - AI/ML
 
 카테고리를 추가하려면 `src/_includes/sidebar.njk`와 `src/categories.njk` 파일을 수정하세요.
+
+## 다국어 지원
+
+이 블로그는 한국어와 영어를 지원합니다.
+
+### 포스트에 언어 지정
+
+포스트의 front matter에 `lang` 필드를 추가하세요:
+
+```yaml
+---
+title: "My Post Title"
+lang: en  # 또는 "ko" (기본값)
+---
+```
+
+### 언어별 컬렉션
+
+- `collections.blog_ko`: 한국어 포스트만
+- `collections.blog_en`: 영어 포스트만
+- `collections.blog`: 모든 언어 포스트
+
+### 언어 전환
+
+사용자는 헤더의 언어 전환 버튼으로 한국어/영어를 전환할 수 있습니다. 선택한 언어는 localStorage에 저장되어 다음 방문 시에도 유지됩니다.
+
+자세한 내용은 [POST-CREATION-GUIDE.md](./POST-CREATION-GUIDE.md)의 "다국어 지원" 섹션을 참조하세요.
 
 ## 배포
 

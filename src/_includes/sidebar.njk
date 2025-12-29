@@ -1,11 +1,12 @@
+{% set currentLang = page.lang or "ko" %}
 <aside class="space-y-8">
     <!-- 최근 글 -->
     <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <h3 class="text-lg font-bold text-dark-900 mb-4">최근 글</h3>
-        <ul class="space-y-3">
-            {% set recentPosts = collections.blog | limit(5) %}
+        <h3 class="text-lg font-bold text-dark-900 mb-4" data-i18n-sidebar="recentPosts">{{ i18n[currentLang].common.recentPosts | default(i18n.ko.common.recentPosts) }}</h3>
+        <ul class="space-y-3" id="sidebar-recent-posts">
+            {% set recentPosts = collections.blog | limit(10) %}
             {% for post in recentPosts %}
-            <li>
+            <li class="sidebar-post-item" data-lang="{{ post.data.lang | default('ko') }}">
                 <a href="{{ post.url }}" class="text-sm text-dark-700 hover:text-primary-600 line-clamp-2">
                     {{ post.data.title }}
                 </a>
@@ -16,7 +17,7 @@
 
     <!-- 카테고리 -->
     <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <h3 class="text-lg font-bold text-dark-900 mb-4">카테고리</h3>
+        <h3 class="text-lg font-bold text-dark-900 mb-4" data-i18n-sidebar="categories">{{ i18n[currentLang].common.categories | default(i18n.ko.common.categories) }}</h3>
         <ul class="space-y-2">
             {% for category in categoryList %}
             <li>
@@ -34,7 +35,7 @@
 
     <!-- 태그 클라우드 -->
     <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <h3 class="text-lg font-bold text-dark-900 mb-4">태그</h3>
+        <h3 class="text-lg font-bold text-dark-900 mb-4" data-i18n-sidebar="tags">{{ i18n[currentLang].common.tags | default(i18n.ko.common.tags) }}</h3>
         <div class="flex flex-wrap gap-2">
             {% set allTags = collections.blog | getAllTags %}
             {% for tag in allTags | slice(0, 15) %}

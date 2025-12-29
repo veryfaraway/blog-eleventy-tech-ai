@@ -10,8 +10,8 @@ eleventyComputed:
 ---
 
 {% set categoryPosts = collections[categoryName] %}
-{% if categoryPosts %}
-
+{% set currentLang = page.lang or "ko" %}
+{% set filteredPosts = categoryPosts | filterByLang(currentLang) %}
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <!-- 메인 컨텐츠 -->
@@ -21,16 +21,16 @@ eleventyComputed:
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
-                    모든 카테고리
+                    {{ i18n[currentLang].categories.allCategories | default("모든 카테고리") }}
                 </a>
                 <h1 class="text-4xl font-bold text-dark-900 mb-2">{{ categoryName }}</h1>
-                <p class="text-dark-700">{{ categoryPosts.length }}개의 포스트</p>
+                <p class="text-dark-700" data-post-count>{{ categoryPosts.length }}개의 포스트</p>
             </div>
 
             <!-- 카드 그리드 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {% for post in categoryPosts | reverse %}
-                <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="posts-container">
+                {% for post in categoryPosts %}
+                <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group post-item" data-lang="{{ post.data.lang | default('ko') }}">
                     <!-- Thumbnail -->
                     <a href="{{ post.url }}" class="block aspect-video bg-gradient-to-br from-primary-100 to-accent-100 relative overflow-hidden">
                         {% if post.data.thumbnail %}
@@ -73,6 +73,13 @@ eleventyComputed:
                 </article>
                 {% endfor %}
             </div>
+
+            <!-- No posts message (hidden by default, shown by JS) -->
+            <div id="no-posts-message" class="hidden bg-white rounded-lg border border-gray-200 p-12 text-center">
+                <p class="text-dark-700 text-lg mb-4">
+                    {{ i18n[currentLang].home.noPosts | default("아직 포스트가 없습니다.") }}
+                </p>
+            </div>
         </div>
         
         <!-- 사이드바 -->
@@ -82,4 +89,3 @@ eleventyComputed:
     </div>
 </div>
 
-{% endif %}
