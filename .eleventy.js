@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig) {
     collection.forEach(item => {
       (item.data.tags || []).forEach(tag => tagSet.add(tag));
     });
-    return Array.from(tagSet).filter(tag => tag !== "blog" && tag !== "post");
+    return Array.from(tagSet).filter(tag => tag !== "blog" && tag !== "post").sort();
   });
 
   // filterByTag 필터
