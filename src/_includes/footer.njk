@@ -24,7 +24,7 @@
                 <h3 class="font-bold text-dark-900 mb-4" data-footer-categories-title>{{ i18n[currentLang].common.footer.categories | default(i18n.ko.common.footer.categories) }}</h3>
                 <ul class="space-y-2 text-sm">
                     {% for category in categoryList | slice(0, 4) %}
-                    <li><a href="/categories/{{ category | slugify }}/" class="text-dark-700 hover:text-primary-600">{{ category }}</a></li>
+                    <li><a href="/categories/{{ category.slug }}/" class="text-dark-700 hover:text-primary-600">{{ category.name }}</a></li>
                     {% endfor %}
                 </ul>
             </div>

@@ -8,6 +8,7 @@ tags:
   - organization
   - tips
 draft: true
+thumbnail: https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2368&auto=format&fit=crop
 ---
 
 # 포스트 디렉토리 구조

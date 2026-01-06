@@ -2,14 +2,14 @@
 pagination:
   data: categoryList
   size: 1
-  alias: categoryName
-permalink: /categories/{{ categoryName | slugify }}/
+  alias: category
+permalink: /categories/{{ category.slug }}/
 layout: base.njk
 eleventyComputed:
-  title: "{{ categoryName }}"
+  title: "{{ category.name }}"
 ---
 
-{% set categoryPosts = collections[categoryName] %}
+{% set categoryPosts = collections[category.name] %}
 {% set currentLang = page.lang or "ko" %}
 {% set filteredPosts = categoryPosts | filterByLang(currentLang) %}
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -23,7 +23,7 @@ eleventyComputed:
                     </svg>
                     {{ i18n[currentLang].categories.allCategories | default("모든 카테고리") }}
                 </a>
-                <h1 class="text-4xl font-bold text-dark-900 mb-2">{{ categoryName }}</h1>
+                <h1 class="text-4xl font-bold text-dark-900 mb-2">{{ category.name }}</h1>
                 <p class="text-dark-700" data-post-count>{{ categoryPosts.length }}개의 포스트</p>
             </div>
 
@@ -43,7 +43,7 @@ eleventyComputed:
                         </div>
                         {% endif %}
                         <span class="absolute top-3 left-3 px-2 py-1 text-xs font-semibold bg-white/90 text-primary-700 rounded-full">
-                            {{ categoryName }}
+                            {{ category.name }}
                         </span>
                     </a>
                     

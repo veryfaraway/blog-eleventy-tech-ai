@@ -3,12 +3,13 @@ layout: post.njk
 title: 주경야근 블로그에 오신 것을 환영합니다
 description: Eleventy와 Tailwind CSS로 만든 기술 블로그의 첫 포스트입니다.
 lang: ko
-date: 2023-01-15
+date: 2022-01-01
 category: Frontend
 tags:
   - blog
   - eleventy
   - tailwind
+thumbnail: https://images.unsplash.com/photo-1675697994557-ff4e243bac52?q=80&w=2370&auto=format&fit=crop
 ---
 
 # 주경야근 블로그에 오신 것을 환영합니다! 🎉

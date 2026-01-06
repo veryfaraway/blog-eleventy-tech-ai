@@ -13,12 +13,12 @@ permalink: /categories/
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {% for category in categoryList %}
-        {% set categoryPosts = collections[category] %}
-        <a href="/categories/{{ category | slugify }}/" 
+        {% set categoryPosts = collections[category.name] %}
+        <a href="/categories/{{ category.slug }}/" 
            class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md hover:border-primary-300 transition-all group">
             <div class="flex items-center justify-between mb-3">
                 <h2 class="text-2xl font-bold text-dark-900 group-hover:text-primary-600 transition-colors">
-                    {{ category }}
+                    {{ category.name }}
                 </h2>
                 <svg class="w-6 h-6 text-primary-600 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>

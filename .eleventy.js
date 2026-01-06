@@ -242,16 +242,16 @@ module.exports = function (eleventyConfig) {
     return Array.from(tagSet).sort();
   });
 
-  // 카테고리 목록
+  // 카테고리 목록 (이름과 슬러그 분리)
   eleventyConfig.addGlobalData("categoryList", [
-    "Trends",
-    "Frontend",
-    "Backend",
-    "Mobile",
-    "Data",
-    "Tools",
-    "DevOps",
-    "AI/ML"
+    { name: "Trends", slug: "trends" },
+    { name: "Frontend", slug: "frontend" },
+    { name: "Backend", slug: "backend" },
+    { name: "Mobile", slug: "mobile" },
+    { name: "Data", slug: "data" },
+    { name: "Tools", slug: "tools" },
+    { name: "DevOps", slug: "devops" },
+    { name: "AI/ML", slug: "ai-ml" }
   ]);
 
   // 읽기 시간 자동 계산
