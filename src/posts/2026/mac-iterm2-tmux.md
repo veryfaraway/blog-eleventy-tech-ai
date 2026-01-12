@@ -2,8 +2,9 @@
 layout: post.njk
 title: "iTerm2 유저를 위한 tmux 가이드: 생산성을 극대화하는 터미널 활용법"
 description: "터미널을 더 스마트하게! tmux의 핵심 개념부터 iTerm2 연동, 추천 설정까지 한 번에 정리합니다."
+slug: mac-iterm2-tmux
 lang: ko
-date: 2026-01-11
+date: 2026-01-10
 category: Tools
 tags:
   - iterm2
@@ -11,6 +12,9 @@ tags:
   - terminal
   - macos
 thumbnail: https://images.unsplash.com/photo-1551524163-d00af9f12253?q=80&w=2050&auto=format&fit=crop
+relatedPosts:
+  - mac-iterm2-tmux-tpm
+  - mac-iterm2-tmux-cheatsheet
 ---
 
 맥에서 개발을 하다 보면 터미널 창이 수십 개로 늘어나거나, 서버 접속이 끊겨 작업 중이던 프로세스가 날아가는 경험을 한 번쯤 해보셨을 겁니다. 오늘은 이 고민을 해결해 줄 터미널 멀티플렉서, **tmux**를 소개합니다.
