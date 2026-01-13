@@ -8,8 +8,6 @@ description: "Java 21 LTS 버전의 주요 신기능을 Java 17과 비교하며 
 category: Backend
 tags:
   - java
-  - java21
-  - java17
   - lts
   - spring-boot
   - virtual-threads

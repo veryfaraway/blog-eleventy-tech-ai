@@ -11,7 +11,6 @@ tags:
   - record
   - immutability
   - spring-boot
-  - java16
 thumbnail: https://media.licdn.com/dms/image/v2/D5612AQEkpIuNMavuiA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1686767414414?e=2147483647&v=beta&t=PHNjoDG3_wsGDP0as26ILzaNkGbiQIccDA9JNW5fOIw
 ---
 

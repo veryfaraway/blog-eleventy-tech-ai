@@ -9,7 +9,6 @@ category: Tools
 tags:
   - redis
   - windows
-  - windows11
   - wsl2
   - docker
   - memurai

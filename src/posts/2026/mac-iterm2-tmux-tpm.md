@@ -16,6 +16,7 @@ thumbnail: https://images.unsplash.com/photo-1601467450590-8c3d11cde2fd?q=80&w=2
 relatedPosts:
   - mac-iterm2-tmux
   - mac-iterm2-tmux-cheatsheet
+  - mac-iterm2-tmux-advanced
 ---
 
 지난 포스팅에서는 tmux의 기초와 iTerm2 연동법을 알아봤습니다. 하지만 기본 tmux 화면은 왠지 투박하고 90년대 개발자 환경처럼 보이죠. 

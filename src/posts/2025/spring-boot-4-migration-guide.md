@@ -9,7 +9,6 @@ category: Backend
 tags:
   - spring-boot
   - java
-  - java21
   - migration
   - graalvm
   - virtual-threads
