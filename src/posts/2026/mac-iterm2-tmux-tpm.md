@@ -14,7 +14,7 @@ tags:
   - macos
 thumbnail: https://images.unsplash.com/photo-1601467450590-8c3d11cde2fd?q=80&w=2370&auto=format&fit=crop
 relatedPosts:
-  - mac-iterm2-tmux
+  - mac-iterm2-tmux-basic
   - mac-iterm2-tmux-cheatsheet
   - mac-iterm2-tmux-advanced
 ---
