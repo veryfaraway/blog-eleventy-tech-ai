@@ -1,0 +1,21 @@
+{
+  "name": "주경야근",
+  "short_name": "주경야근",
+  "description": "프로그래밍, 데이터분석, IT 트렌드에 대한 기술 블로그",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

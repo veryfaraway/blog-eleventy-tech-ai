@@ -18,6 +18,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/ads.txt");
   eleventyConfig.addPassthroughCopy("src/*.html");
 
+  // 파비콘 파일들
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/favicon-16x16.png");
+  eleventyConfig.addPassthroughCopy("src/favicon-32x32.png");
+  eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
+
   // Prism.js 테마 복사
   eleventyConfig.addPassthroughCopy({
     "node_modules/prismjs/themes/prism-tomorrow.css": "css/prism-theme.css"
@@ -32,6 +39,11 @@ module.exports = function (eleventyConfig) {
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
+  });
+
+  // ISO 8601 날짜 필터 (구조화된 데이터용)
+  eleventyConfig.addFilter("dateISO", function (date) {
+    return date.toISOString();
   });
 
   // limit 필터

@@ -2,6 +2,7 @@
 layout: post.njk
 title: "Git 브랜치 히스토리 오염 시, 특정 파일만 안전하게 복구하고 새 브랜치로 옮기기"
 description: "Main 브랜치의 히스토리가 비정상적으로 변경되었을 때, 당황하지 않고 git reflog를 통해 정상 시점을 찾아 수정된 파일들만 새 브랜치로 이관하는 실무 가이드입니다."
+slug: git-log-migration
 date: 2026-01-05
 category: Tools
 tags:
