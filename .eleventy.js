@@ -1,5 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
   // 플러그인 - Prism.js 테마 설정
@@ -8,6 +9,30 @@ module.exports = function (eleventyConfig) {
       class: ({ language }) => `language-${language}`
     }
   });
+
+  // Markdown 설정
+  const mdOptions = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  const md = markdownIt(mdOptions);
+
+  // Custom renderer for mermaid
+  const defaultRender = md.renderer.rules.fence || function (tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
+  };
+
+  md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+    const token = tokens[idx];
+    const code = token.content.trim();
+    if (token.info === 'mermaid') {
+      return `<pre class="mermaid">${code}</pre>`;
+    }
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  eleventyConfig.setLibrary("md", md);
 
   // 정적 자산 복사
   eleventyConfig.addPassthroughCopy("src/css");
