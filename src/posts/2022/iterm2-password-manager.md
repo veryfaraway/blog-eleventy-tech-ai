@@ -9,6 +9,8 @@ category: Tools
 tags:
   - macos
   - terminal
+  - iterm2
+  - password-manager
 thumbnail: https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?q=80&w=2940&auto=format&fit=crop
 ---
 

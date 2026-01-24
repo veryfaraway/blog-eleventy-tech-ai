@@ -8,6 +8,7 @@ description: "SDKMAN 소개 및 사용 방법을 알려드립니다."
 category: Tools
 tags:
   - sdkman
+  - java
 thumbnail: https://images.unsplash.com/photo-1542822192-416be3b9e479?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3
 relatedPosts:
   - sdkman-usage
@@ -107,11 +108,4 @@ SDKMAN!은 macOS에서 여러 버전의 JDK를 손쉽게 설치하고 관리할 
 
 이제 SDKMAN!을 설치하고 JDK 버전을 관리하는 방법을 익혔으니, 더 많은 Java SDK와 툴을 탐색해보세요. 이 도구는 Java 개발자뿐만 아니라, 다양한 개발 환경에서 유용하게 활용될 수 있습니다.
 
----
-
-## 관련 글
-
-SDKMAN에 대해 더 자세히 알고 싶다면 아래 글을 참고하세요:
-
-- [SDKMAN 사용방법](/posts/2024/sdkman-usage/) - SDKMAN 공식 문서 기반 상세 사용 가이드
 

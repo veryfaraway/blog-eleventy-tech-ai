@@ -45,11 +45,3 @@ Do you want java 21.0.4-tem to be set as default? (Y/n):
 Setting java 21.0.4-tem as default.
 ```
 
----
-
-## 관련 글
-
-SDKMAN 설치와 JDK 관리에 대한 전체 가이드는 아래 글을 참고하세요:
-
-- [macOS에서 여러 버전의 JDK를 설치하고 관리하는 방법](/posts/2024/macos-managing-jdk/) - SDKMAN 설치부터 JDK 버전 관리까지 완벽 가이드
-
