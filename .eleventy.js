@@ -179,6 +179,22 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // 동적 permalink 설정 (slug 우선, 없으면 파일명 기반)
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink: (data) => {
+      // 포스트가 아니면 기본 동작
+      if (!data.page.inputPath.includes('/posts/')) {
+        return data.permalink;
+      }
+      
+      // slug가 있으면 slug 기반, 없으면 파일명 기반
+      const year = data.page.date.getFullYear();
+      const slug = data.slug || data.page.fileSlug;
+      
+      return `/posts/${year}/${slug}/`;
+    }
+  });
+
   // 컬렉션
   eleventyConfig.addCollection("blog", function (collection) {
     // 하위 디렉토리 포함 (src/posts/**/*.md)
