@@ -5,7 +5,15 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# 404 페이지 처리
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/404.html"
+  status = 404
+
+# 이전 URL 구조에서 새 URL 구조로 리다이렉트 (필요한 경우 추가)
+# 예시: 이전 블로그 테마에서 URL이 변경된 경우
+# [[redirects]]
+#   from = "/old-path/:slug"
+#   to = "/posts/:year/:slug/"
+#   status = 301
