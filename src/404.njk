@@ -1,0 +1,79 @@
+---
+layout: base.njk
+title: "404 — 페이지를 찾을 수 없습니다"
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<section class="py-20 px-4 text-center">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex flex-col items-center gap-6">
+      <img
+        src="https://res.cloudinary.com/doal3ofyr/image/upload/f_auto,q_auto,w_1200/v1770982936/library/errors/404_burnout_qqd6i8.png"
+        alt="혼란스러운 사서 일러스트"
+        class="w-full max-w-xl mx-auto"
+      />
+
+      <div class="px-4">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">앗! 찾을 수 없는 페이지예요</h1>
+        <p class="text-base md:text-lg text-gray-700">요청하신 페이지가 존재하지 않거나 사라졌습니다. 대신 안전하게 집으로 데려다드릴게요.</p>
+      </div>
+
+      <div class="mt-8 w-full max-w-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <a href="/" class="group flex items-center gap-4 p-5 bg-white border-2 border-primary-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-all duration-200 hover:shadow-md">
+            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200 transition-colors">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-lg text-dark-900">홈으로</div>
+              <div class="text-sm text-dark-700">메인 페이지로 이동</div>
+            </div>
+          </a>
+
+          <a href="/categories/" class="group flex items-center gap-4 p-5 bg-white border-2 border-tech-purple/30 rounded-lg hover:border-tech-purple hover:bg-purple-50 transition-all duration-200 hover:shadow-md">
+            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+              <svg class="w-6 h-6 text-tech-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-lg text-dark-900">카테고리</div>
+              <div class="text-sm text-dark-700">주제별로 둘러보기</div>
+            </div>
+          </a>
+
+          <a href="/blog/" class="group flex items-center gap-4 p-5 bg-white border-2 border-tech-green/30 rounded-lg hover:border-tech-green hover:bg-green-50 transition-all duration-200 hover:shadow-md">
+            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
+              <svg class="w-6 h-6 text-tech-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-lg text-dark-900">블로그</div>
+              <div class="text-sm text-dark-700">최신 글 보기</div>
+            </div>
+          </a>
+
+          <a href="/about/" class="group flex items-center gap-4 p-5 bg-white border-2 border-accent-200 rounded-lg hover:border-accent-400 hover:bg-accent-50 transition-all duration-200 hover:shadow-md">
+            <div class="flex-shrink-0 w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center group-hover:bg-accent-200 transition-colors">
+              <svg class="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-lg text-dark-900">소개</div>
+              <div class="text-sm text-dark-700">문의 및 정보</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="text-center">
+          <p class="text-sm text-dark-700">또는 브라우저의 뒤로가기 버튼을 눌러보세요</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
