@@ -87,11 +87,13 @@ is:pr is:merged base:main head:feature/my-branch
 stage와 main 중 어디로 머지되었는지 확인하려면:
 
 **stage로 머지되었는지:**
+
 ```text
 is:pr is:merged base:stage head:feature/my-branch
 ```
 
 **main으로 머지되었는지:**
+
 ```text
 is:pr is:merged base:main head:feature/my-branch
 ```
@@ -100,7 +102,7 @@ is:pr is:merged base:main head:feature/my-branch
 
 리포지토리를 넘나들며 검색하고 싶다면 GitHub 전역 검색을 사용합니다.
 
-1. GitHub 상단 메뉴에서 **Pull requests** 클릭 (https://github.com/pulls)
+1. GitHub 상단 메뉴에서 **Pull requests** 클릭 [https://github.com/pulls](https://github.com/pulls)
 2. 검색창에 리포지토리 정보 포함:
 
 ```text
@@ -169,11 +171,13 @@ stage에는 머지됐지만 main에는 안 된 브랜치 찾기:
 ```text
 is:pr is:merged base:stage head:feature/my-branch
 ```
+
 (결과 있음)
 
 ```text
 is:pr is:merged base:main head:feature/my-branch
 ```
+
 (결과 없음)
 
 → 이 브랜치는 테스트 환경에만 배포된 상태입니다.
@@ -191,7 +195,7 @@ is:pr is:merged base:main head:feature/my-branch
 ## 요약 치트시트
 
 | 목적 | 검색 쿼리 |
-|------|-----------|
+| ------ | ----------- |
 | 특정 브랜치의 모든 PR | `is:pr head:브랜치명` |
 | 머지된 PR만 | `is:pr is:merged head:브랜치명` |
 | main으로 머지된 PR | `is:pr is:merged base:main head:브랜치명` |

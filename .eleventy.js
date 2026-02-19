@@ -152,6 +152,23 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Alert paired shortcode: 사용법 (마크다운/Nunjucks에서 사용 가능)
+  // {% alert "info", "💡 정보" %}내용{% endalert %}
+  eleventyConfig.addPairedShortcode("alert", function (content, type = "info", title = "") {
+    const icons = {
+      info: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8.5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.9 15.2h.02" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      success: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      warning: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      danger: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.36 5.64L5.64 18.36" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.64 5.64L18.36 18.36" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+    };
+
+    const icon = icons[type] || icons.info;
+    // `md` is the Markdown-It instance defined above; render inner content to HTML
+    const body = (typeof md !== 'undefined' && md.render) ? md.render(content) : content;
+
+    return `\n<div class="alert alert-${type}">\n  <div class="alert-icon">${icon}</div>\n  <div class="alert-body">${title ? `<strong>${title}</strong>` : ''}${body}</div>\n</div>\n`;
+  });
+
   // 다국어 번역 필터
   eleventyConfig.addFilter("t", function (key, lang = "ko") {
     const i18n = require("./src/_data/i18n.js");

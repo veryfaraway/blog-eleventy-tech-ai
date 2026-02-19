@@ -37,33 +37,30 @@ draft: true
 
 다양한 타입의 알림 박스를 사용할 수 있습니다:
 
-<div class="alert alert-info">
-<strong>💡 정보</strong>
+{% alert "info", "💡 정보" %}
 이것은 정보성 알림입니다. 유용한 팁이나 참고사항을 전달할 때 사용하세요.
-</div>
+{% endalert %}
 
-<div class="alert alert-success">
-<strong>✅ 성공</strong>
+{% alert "success", "✅ 성공" %}
 작업이 성공적으로 완료되었습니다. 긍정적인 결과를 표시할 때 사용하세요.
-</div>
+{% endalert %}
 
-<div class="alert alert-warning">
-<strong>⚠️ 주의</strong>
+{% alert "warning", "⚠️ 주의" %}
 주의가 필요한 내용입니다. 사용자가 조심해야 할 사항을 알릴 때 사용하세요.
-</div>
+{% endalert %}
 
-<div class="alert alert-danger">
-<strong>🚨 경고</strong>
+{% alert "danger", "🚨 경고" %}
 중요한 경고 메시지입니다. 심각한 문제나 반드시 알아야 할 내용에 사용하세요.
-</div>
+{% endalert %}
 
 ### Alert 사용법
 
-```html
-<div class="alert alert-info">
-<strong>제목</strong>
+```njk
+{% raw %}
+{% alert "info", "제목" %}
 내용을 여기에 작성합니다.
-</div>
+{% endalert %}
+{% endraw %}
 ```
 
 ## 3. 인용구 (Blockquote)
@@ -132,7 +129,7 @@ npm run build
 ## 6. 표 (Table)
 
 | 항목 | 설명 | 상태 |
-|------|------|------|
+| ------ | ------ | ------ |
 | 환경 변수 | GOOGLE_ANALYTICS_ID | ✅ 완료 |
 | 배포 | Netlify 설정 | ✅ 완료 |
 | SEO | 메타 태그 추가 | 🔄 진행중 |

@@ -108,6 +108,7 @@ Eleventy에서 다음 컬렉션을 사용할 수 있습니다:
 같은 주제를 한국어와 영어로 모두 작성하려면:
 
 1. **한국어 포스트**: `my-post-ko.md`
+
 ```yaml
 ---
 title: "Java 21 완벽 가이드"
@@ -119,6 +120,7 @@ relatedPosts:
 ```
 
 2. **영어 포스트**: `my-post-en.md`
+
 ```yaml
 ---
 title: "Complete Guide to Java 21"
