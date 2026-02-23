@@ -6,7 +6,7 @@ slug: cloudinary-overview
 date: 2026-01-02
 draft: false
 description: "개인 개발자와 소규모 프로젝트를 위한 Cloudinary의 핵심 기능과 활용법을 소개합니다. 이미지·영상 업로드, 변환, 최적화, CDN 제공 등 다양한 기능을 쉽게 활용하는 방법을 알아봅니다."
-category: Trands
+category: Trends
 tags:
   - cloudinary
 thumbnail: https://cdn.prod.website-files.com/64d41aab8183c7c3324ddb29/674f5ebd0de31390e6f53218_3-logo-brand-square.svg
@@ -186,9 +186,5 @@ React/Vue/모바일 앱에서도 패턴은 동일하다.
 개인 개발자 입장에서 [Cloudinary]는 “이미지/영상 파일과 관련된 귀찮은 모든 것(저장, 리사이즈, 포맷, 최적화, CDN)”을 대신 처리해 주는 도구라고 볼 수 있다.
 
 무료 플랜으로 충분히 시작할 수 있고, 블로그·포트폴리오·사이드 프로젝트의 미디어 파이프라인을 간단한 URL 조합 중심으로 설계할 수 있다는 점이 가장 큰 장점이다.
-
-
-
-
 
 [Cloudinary]: https://cloudinary.com
