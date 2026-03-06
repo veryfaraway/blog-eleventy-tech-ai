@@ -5,7 +5,7 @@ description: "Git에서 브랜치를 전환하는 두 가지 명령어인 checko
 slug: git-checkout-switch
 lang: ko
 date: 2026-01-13
-category: Tools
+category: DevOps
 tags:
   - git
 thumbnail: https://images.unsplash.com/photo-1645743705820-adf8356be3c8?q=80&w=2370&auto=format&fit=crop

@@ -11,6 +11,7 @@ tags:
   - guide
   - writing
   - tutorial
+  - example
 draft: true
 ---
 
