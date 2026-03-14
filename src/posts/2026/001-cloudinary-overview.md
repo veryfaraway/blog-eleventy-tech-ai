@@ -6,7 +6,7 @@ slug: cloudinary-overview
 date: 2026-01-02
 draft: false
 description: "개인 개발자와 소규모 프로젝트를 위한 Cloudinary의 핵심 기능과 활용법을 소개합니다. 이미지·영상 업로드, 변환, 최적화, CDN 제공 등 다양한 기능을 쉽게 활용하는 방법을 알아봅니다."
-category: Trends
+category: Tools
 tags:
   - cloudinary
 thumbnail: https://cdn.prod.website-files.com/64d41aab8183c7c3324ddb29/674f5ebd0de31390e6f53218_3-logo-brand-square.svg
