@@ -57,6 +57,8 @@ relatedPosts:
 
 즉, 원조는 제록스였다. 그리고 잡스와 게이츠, 둘 다 제록스의 아이디어를 가져갔다. 이것이 이 이야기 전체를 이해하는 가장 중요한 전제다.
 
+![제록스 PARC](https://res.cloudinary.com/doal3ofyr/image/upload/v1773494637/media/company/apple/xerox_invented_gui_hjqu08.jpg)
+
 ---
 
 ## 1장: 협력의 시절 (1981~1984)
