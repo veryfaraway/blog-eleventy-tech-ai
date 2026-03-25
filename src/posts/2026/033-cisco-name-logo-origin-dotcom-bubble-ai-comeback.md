@@ -24,10 +24,6 @@ thumbnail: https://res.cloudinary.com/doal3ofyr/image/upload/v1773495008/media/c
 세상에서 가장 큰 회사가 될 것이다.
 {% endalert %}
 
-{% alert "info", "존 체임버스, 2000년 3월 시스코 CEO" %}
-세상에서 가장 큰 회사가 될 것이다.
-{% endalert %}
-
 그로부터 딱 두 달 뒤, 시스코의 주가는 곤두박질치기 시작했다.
 
 ---
