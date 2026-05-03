@@ -5,6 +5,11 @@
   "language": "ko",
   "logo": "/assets/logo.svg",
   "favicon": "/assets/favicon.svg",
+  "favicon16": "/favicon-16x16.png",
+  "favicon32": "/favicon-32x32.png",
+  "appleTouchIcon": "/apple-touch-icon.png",
+  "webmanifest": "/site.webmanifest",
+  "themeColor": "#3b82f6",
   "ogImage": "/assets/og-image.png",
   "author": {
     "name": "야근반장",
