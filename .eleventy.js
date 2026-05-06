@@ -65,19 +65,6 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
-  // 태그별 컬렉션
-  eleventyConfig.addCollection("tagList", function (collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => {
-        if (tag !== "blog" && tag !== "post") {
-          tagSet.add(tag);
-        }
-      });
-    });
-    return Array.from(tagSet).sort();
-  });
-
   // 카테고리 목록 (이름과 슬러그 분리)
   eleventyConfig.addGlobalData("categoryList", [
     { name: "Trends", slug: "trends" },
