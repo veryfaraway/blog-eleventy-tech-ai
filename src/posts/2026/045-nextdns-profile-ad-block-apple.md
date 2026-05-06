@@ -134,7 +134,7 @@ macOS Ventura(13) 이상에서는 `시스템 설정 → 개인정보 보호 및 
 
 ## STEP 5. 동작 확인
 
-설치 후 브라우저에서 **[test.nextdns.io](https://test.nextdns.io)**에 접속하면 NextDNS가 정상 동작 중인지 확인할 수 있다.
+설치 후 브라우저에서 **[test.nextdns.io](https://test.nextdns.io)** 에 접속하면 NextDNS가 정상 동작 중인지 확인할 수 있다.
 
 ```mermaid
 flowchart LR
