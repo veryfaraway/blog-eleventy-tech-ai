@@ -41,8 +41,8 @@ draft: false
 
 DNS(Domain Name System)는 도메인 이름을 IP 주소로 바꿔주는 전화번호부 같은 시스템이다. NextDNS는 이 과정에서 광고·트래커 도메인 주소 요청 자체를 차단해버린다. 광고 데이터가 기기에 도달하기도 전에 막는 구조라 가볍고 빠르다.
 
-{% alert "info" %}
-애플은 iOS 14, macOS Big Sur부터 **네이티브 암호화 DNS(DoH/DoT)**를 공식 지원한다. 덕분에 별도 앱 없이 설정 프로필 하나만으로 적용이 가능하다.
+{% alert "info", "정보" %}
+애플은 iOS 14, macOS Big Sur부터 **네이티브 암호화 DNS(DoH/DoT)** 를 공식 지원한다. 덕분에 별도 앱 없이 설정 프로필 하나만으로 적용이 가능하다.
 {% endalert %}
 
 ---
