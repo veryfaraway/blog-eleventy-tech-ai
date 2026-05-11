@@ -10,6 +10,7 @@ tags:
   - Apple Silicon
   - Real-ESRGAN
   - ffmpeg
+  - macos
 thumbnail: https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=3540&auto=format&fit=crop
 draft: false
 series: "Mac M 시리즈로 DVD 영상 업스케일링"
