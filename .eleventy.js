@@ -3,6 +3,7 @@ const theme = require("@veryfaraway/eleventy-theme");
 module.exports = function (eleventyConfig) {
   // Shared theme (build-time mermaid, unified permalink, selectable comments)
   const baseConfig = theme(eleventyConfig, {
+    tagColor: "primary", // primary, ocean, sunset, forest, neon
     comments: { provider: "auto", utterances: { theme: "github-light", issueTerm: "pathname" } },
     mermaid: { enabled: true, mode: "buildtime" },
     permalink: { mode: "computed", stripNumericPrefix: true, enableLangParam: false },
