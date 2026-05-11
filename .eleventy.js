@@ -16,52 +16,55 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
 
+  // 초안 포스트 필터링 함수
+  const isDraft = (item) => item.data.draft === true;
+
   // 카테고리별 컬렉션 (언어별 필터링 + 날짜 정렬)
   eleventyConfig.addCollection("Trends", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "Trends")
+      .filter(item => item.data.category === "Trends" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("Frontend", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "Frontend")
+      .filter(item => item.data.category === "Frontend" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("Backend", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "Backend")
+      .filter(item => item.data.category === "Backend" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("Mobile", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "Mobile")
+      .filter(item => item.data.category === "Mobile" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("Data", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "Data")
+      .filter(item => item.data.category === "Data" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("Tools", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "Tools")
+      .filter(item => item.data.category === "Tools" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("DevOps", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "DevOps")
+      .filter(item => item.data.category === "DevOps" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("AI/ML", function (collection) {
     return collection.getAll()
-      .filter(item => item.data.category === "AI/ML")
+      .filter(item => item.data.category === "AI/ML" && !isDraft(item))
       .sort((a, b) => b.date - a.date);
   });
 
