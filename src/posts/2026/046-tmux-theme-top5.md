@@ -67,7 +67,7 @@ set -g @catppuccin_flavour 'mocha'  # latte, frappe, macchiato, mocha 중 선택
 set -g @plugin 'janoamaral/tokyo-night-tmux'
 ```
 
-{% alert "tip" %}
+{% alert "success" %}
 `tmux-mem-cpu-load`를 함께 설치하면 상태 바에 시스템 리소스를 실시간으로 표시할 수 있습니다.
 `set -g status-right "#(tmux-mem-cpu-load --interval 2)"`
 {% endalert %}
